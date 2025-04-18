@@ -286,7 +286,7 @@ class ApiService:
             }
 
 # ======================
-# PÁGINAS (ATUALIZADO COM BOTÕES VIP)
+# PÁGINAS (ATUALIZADO COM TEMA VERMELHO)
 # ======================
 class NewPages:
     @staticmethod
@@ -294,13 +294,14 @@ class NewPages:
         st.markdown("""
         <style>
             .hero-banner {
-                background: linear-gradient(135deg, #1e0033, #3c0066);
+                background: linear-gradient(135deg, #8B0000, #FF0000);
                 padding: 80px 20px;
                 text-align: center;
                 border-radius: 15px;
                 color: white;
                 margin-bottom: 30px;
-                border: 2px solid #ff66b3;
+                border: 2px solid #ff3333;
+                box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
             }
             .preview-img {
                 border-radius: 10px;
@@ -315,17 +316,18 @@ class NewPages:
 
         st.markdown("""
         <div class="hero-banner">
-            <h1 style="color: #ff66b3;">💋 Paloma Premium</h1>
+            <h1 style="color: white;">💋 Paloma Premium</h1>
             <p>Conteúdo exclusivo que você não encontra em nenhum outro lugar...</p>
             <div style="margin-top: 20px;">
                 <a href="#vip" style="
-                    background: #ff66b3;
+                    background: #FF0000;
                     color: white;
                     padding: 10px 25px;
                     border-radius: 30px;
                     text-decoration: none;
                     font-weight: bold;
                     display: inline-block;
+                    border: 1px solid white;
                 ">Quero Acessar Tudo</a>
             </div>
         </div>
@@ -337,7 +339,7 @@ class NewPages:
         for col, img in zip(cols, Config.IMG_HOME_PREVIEWS):
             with col:
                 st.image(img, use_container_width=True, caption="🔒 Conteúdo bloqueado", output_format="auto")
-                st.markdown("""<div style="text-align:center; color: #ff66b3; margin-top: -15px;">VIP Only</div>""", unsafe_allow_html=True)
+                st.markdown("""<div style="text-align:center; color: #FF0000; margin-top: -15px;">VIP Only</div>""", unsafe_allow_html=True)
 
         st.markdown("---")
         st.markdown("""
@@ -369,7 +371,7 @@ class NewPages:
             }
             .package-box {
                 flex: 1;
-                background: rgba(30, 0, 51, 0.3);
+                background: rgba(139, 0, 0, 0.3);
                 border-radius: 15px;
                 padding: 20px;
                 border: 1px solid;
@@ -380,22 +382,22 @@ class NewPages:
             }
             .package-box:hover {
                 transform: translateY(-5px);
-                box-shadow: 0 10px 20px rgba(255, 102, 179, 0.3);
+                box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
             }
             .package-start {
-                border-color: #ff66b3;
+                border-color: #FF0000;
             }
             .package-premium {
-                border-color: #9400d3;
+                border-color: #8B0000;
             }
             .package-extreme {
-                border-color: #ff0066;
+                border-color: #FF3333;
             }
             .package-header {
                 text-align: center;
                 padding-bottom: 15px;
                 margin-bottom: 15px;
-                border-bottom: 1px solid rgba(255, 102, 179, 0.3);
+                border-bottom: 1px solid rgba(255, 0, 0, 0.3);
             }
             .package-price {
                 font-size: 1.8em;
@@ -413,7 +415,7 @@ class NewPages:
             }
             .package-benefits li:before {
                 content: "✓";
-                color: #ff66b3;
+                color: #FF0000;
                 position: absolute;
                 left: 0;
                 font-weight: bold;
@@ -422,7 +424,7 @@ class NewPages:
                 position: absolute;
                 top: 15px;
                 right: -30px;
-                background: #ff0066;
+                background: #FF0000;
                 color: white;
                 padding: 5px 30px;
                 transform: rotate(45deg);
@@ -432,23 +434,23 @@ class NewPages:
                 text-align: center;
             }
             .countdown-container {
-                background: linear-gradient(45deg, #ff0066, #ff66b3);
+                background: linear-gradient(45deg, #8B0000, #FF0000);
                 color: white;
                 padding: 15px;
                 border-radius: 10px;
                 margin: 40px 0;
-                box-shadow: 0 4px 15px rgba(255, 0, 102, 0.3);
+                box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
                 text-align: center;
             }
             .offer-card {
-                border: 1px solid #ff66b3;
+                border: 1px solid #FF0000;
                 border-radius: 15px;
                 padding: 20px;
                 margin-bottom: 20px;
-                background: rgba(30, 0, 51, 0.3);
+                background: rgba(139, 0, 0, 0.3);
             }
             .offer-highlight {
-                background: linear-gradient(45deg, #ff0066, #ff66b3);
+                background: linear-gradient(45deg, #8B0000, #FF0000);
                 color: white;
                 padding: 5px 10px;
                 border-radius: 5px;
@@ -459,7 +461,7 @@ class NewPages:
 
         st.markdown("""
         <div style="text-align: center; margin-bottom: 30px;">
-            <h2 style="color: #ff66b3; border-bottom: 2px solid #ff66b3; display: inline-block; padding-bottom: 5px;">📦 PACOTES EXCLUSIVOS</h2>
+            <h2 style="color: #FF0000; border-bottom: 2px solid #FF0000; display: inline-block; padding-bottom: 5px;">📦 PACOTES EXCLUSIVOS</h2>
             <p style="color: #aaa; margin-top: 10px;">Escolha o que melhor combina com seus desejos...</p>
         </div>
         """, unsafe_allow_html=True)
@@ -469,8 +471,8 @@ class NewPages:
         st.markdown("""
         <div class="package-box package-start">
             <div class="package-header">
-                <h3 style="color: #ff66b3;">START</h3>
-                <div class="package-price" style="color: #ff66b3;">R$ 49,90</div>
+                <h3 style="color: #FF0000;">START</h3>
+                <div class="package-price" style="color: #FF0000;">R$ 49,90</div>
                 <small>para iniciantes</small>
             </div>
             <ul class="package-benefits">
@@ -483,7 +485,7 @@ class NewPages:
             <div style="position: absolute; bottom: 20px; width: calc(100% - 40px);">
                 <a href="{checkout_start}" target="_blank" rel="noopener noreferrer" style="
                     display: block;
-                    background: linear-gradient(45deg, #ff66b3, #ff1493);
+                    background: linear-gradient(45deg, #FF0000, #8B0000);
                     color: white;
                     text-align: center;
                     padding: 10px;
@@ -504,8 +506,8 @@ class NewPages:
         <div class="package-box package-premium">
             <div class="package-badge">POPULAR</div>
             <div class="package-header">
-                <h3 style="color: #9400d3;">PREMIUM</h3>
-                <div class="package-price" style="color: #9400d3;">R$ 99,90</div>
+                <h3 style="color: #8B0000;">PREMIUM</h3>
+                <div class="package-price" style="color: #8B0000;">R$ 99,90</div>
                 <small>experiência completa</small>
             </div>
             <ul class="package-benefits">
@@ -520,7 +522,7 @@ class NewPages:
             <div style="position: absolute; bottom: 20px; width: calc(100% - 40px);">
                 <a href="{checkout_premium}" target="_blank" rel="noopener noreferrer" style="
                     display: block;
-                    background: linear-gradient(45deg, #9400d3, #ff1493);
+                    background: linear-gradient(45deg, #8B0000, #FF0000);
                     color: white;
                     text-align: center;
                     padding: 10px;
@@ -540,8 +542,8 @@ class NewPages:
         st.markdown("""
         <div class="package-box package-extreme">
             <div class="package-header">
-                <h3 style="color: #ff0066;">EXTREME</h3>
-                <div class="package-price" style="color: #ff0066;">R$ 199,90</div>
+                <h3 style="color: #FF3333;">EXTREME</h3>
+                <div class="package-price" style="color: #FF3333;">R$ 199,90</div>
                 <small>para verdadeiros fãs</small>
             </div>
             <ul class="package-benefits">
@@ -558,7 +560,7 @@ class NewPages:
             <div style="position: absolute; bottom: 20px; width: calc(100% - 40px);">
                 <a href="{checkout_extreme}" target="_blank" rel="noopener noreferrer" style="
                     display: block;
-                    background: linear-gradient(45deg, #ff0066, #9400d3);
+                    background: linear-gradient(45deg, #FF3333, #8B0000);
                     color: white;
                     text-align: center;
                     padding: 10px;
@@ -647,7 +649,7 @@ class NewPages:
                         {f'<span class="offer-highlight">{plan["tag"]}</span>' if plan["tag"] else ''}
                     </div>
                     <div style="margin: 10px 0;">
-                        <span style="font-size: 1.8em; color: #ff66b3; font-weight: bold;">{plan['price']}</span>
+                        <span style="font-size: 1.8em; color: #FF0000; font-weight: bold;">{plan['price']}</span>
                         <span style="text-decoration: line-through; color: #888; margin-left: 10px;">{plan['original']}</span>
                     </div>
                     <ul style="padding-left: 20px;">
@@ -655,7 +657,7 @@ class NewPages:
                     </ul>
                     <div style="text-align: center; margin-top: 15px;">
                         <a href="{plan['link']}" style="
-                            background: linear-gradient(45deg, #ff1493, #9400d3);
+                            background: linear-gradient(45deg, #8B0000, #FF0000);
                             color: white;
                             padding: 10px 20px;
                             border-radius: 30px;
@@ -674,14 +676,14 @@ class NewPages:
             st.rerun()
 
 # ======================
-# SERVIÇOS DE INTERFACE
+# SERVIÇOS DE INTERFACE (ATUALIZADO COM TEMA VERMELHO)
 # ======================
 class UiService:
     @staticmethod
     def get_chat_audio_player():
         return f"""
         <div style="
-            background: linear-gradient(45deg, #ff66b3, #ff1493);
+            background: linear-gradient(45deg, #8B0000, #FF0000);
             border-radius: 15px;
             padding: 12px;
             margin: 5px 0;
@@ -700,19 +702,19 @@ class UiService:
         call_container = st.empty()
         call_container.markdown(f"""
         <div style="
-            background: linear-gradient(135deg, #1e0033, #3c0066);
+            background: linear-gradient(135deg, #8B0000, #FF0000);
             border-radius: 20px;
             padding: 30px;
             max-width: 300px;
             margin: 0 auto;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            border: 2px solid #ff66b3;
+            border: 2px solid #FF3333;
             text-align: center;
             color: white;
             animation: pulse-ring 2s infinite;
         ">
             <div style="font-size: 3rem;">📱</div>
-            <h3 style="color: #ff66b3; margin-bottom: 5px;">Ligando para Paloma...</h3>
+            <h3 style="color: white; margin-bottom: 5px;">Ligando para Paloma...</h3>
             <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 15px;">
                 <div style="width: 10px; height: 10px; background: #4CAF50; border-radius: 50%;"></div>
                 <span style="font-size: 0.9rem;">Online agora</span>
@@ -730,7 +732,7 @@ class UiService:
         time.sleep(LIGANDO_DELAY)
         call_container.markdown(f"""
         <div style="
-            background: linear-gradient(135deg, #1e0033, #3c0066);
+            background: linear-gradient(135deg, #8B0000, #FF0000);
             border-radius: 20px;
             padding: 30px;
             max-width: 300px;
@@ -825,10 +827,10 @@ class UiService:
                 max-width: 600px;
                 margin: 2rem auto;
                 padding: 2rem;
-                background: linear-gradient(145deg, #1e0033, #3c0066);
+                background: linear-gradient(145deg, #8B0000, #FF0000);
                 border-radius: 15px;
                 box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-                border: 1px solid rgba(255, 102, 179, 0.2);
+                border: 1px solid rgba(255, 51, 51, 0.2);
                 color: white;
             }
             .age-header {
@@ -839,13 +841,13 @@ class UiService:
             }
             .age-icon {
                 font-size: 2.5rem;
-                color: #ff66b3;
+                color: white;
             }
             .age-title {
                 font-size: 1.8rem;
                 font-weight: 700;
                 margin: 0;
-                color: #ff66b3;
+                color: white;
             }
         </style>
         """, unsafe_allow_html=True)
@@ -880,8 +882,8 @@ class UiService:
             st.markdown("""
             <style>
                 [data-testid="stSidebar"] {
-                    background: linear-gradient(180deg, #1e0033 0%, #3c0066 100%) !important;
-                    border-right: 1px solid #ff66b3 !important;
+                    background: linear-gradient(180deg, #8B0000 0%, #FF0000 100%) !important;
+                    border-right: 1px solid #FF3333 !important;
                 }
                 .sidebar-header {
                     text-align: center; 
@@ -889,13 +891,13 @@ class UiService:
                 }
                 .sidebar-header img {
                     border-radius: 50%; 
-                    border: 2px solid #ff66b3;
+                    border: 2px solid #FF3333;
                     width: 80px;
                     height: 80px;
                     object-fit: cover;
                 }
                 .vip-badge {
-                    background: linear-gradient(45deg, #ff1493, #9400d3);
+                    background: linear-gradient(45deg, #8B0000, #FF0000);
                     padding: 15px;
                     border-radius: 8px;
                     color: white;
@@ -908,7 +910,7 @@ class UiService:
                     border-radius: 5px;
                 }
                 .menu-item:hover {
-                    background: rgba(255, 102, 179, 0.2);
+                    background: rgba(255, 51, 51, 0.2);
                 }
             </style>
             """, unsafe_allow_html=True)
@@ -916,7 +918,7 @@ class UiService:
             st.markdown("""
             <div class="sidebar-header">
                 <img src="{profile_img}" alt="Paloma">
-                <h3 style="color: #ff66b3; margin-top: 10px;">Paloma Premium</h3>
+                <h3 style="color: white; margin-top: 10px;">Paloma Premium</h3>
             </div>
             """.format(profile_img=Config.IMG_PROFILE), unsafe_allow_html=True)
             
@@ -944,7 +946,7 @@ class UiService:
             
             st.markdown(f"""
             <div style="
-                background: rgba(255, 20, 147, 0.1); 
+                background: rgba(255, 51, 51, 0.1); 
                 padding: 10px; 
                 border-radius: 8px;
             ">
@@ -985,7 +987,7 @@ class UiService:
         st.title("📸 Galeria Privada")
         st.markdown("""
         <div style="
-            background: rgba(255, 20, 147, 0.1);
+            background: rgba(255, 51, 51, 0.1);
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -1007,7 +1009,7 @@ class UiService:
                 <div style="
                     text-align: center;
                     font-size: 0.8em;
-                    color: #ff66b3;
+                    color: #FF0000;
                     margin-top: -10px;
                 ">
                     🔒 Conteúdo bloqueado
@@ -1070,14 +1072,14 @@ class UiService:
         <style>
             div[data-testid="stHorizontalBlock"] > div > div > button {
                 color: white !important;
-                border: 1px solid #ff66b3 !important;
-                background: rgba(255, 102, 179, 0.15) !important;
+                border: 1px solid #FF3333 !important;
+                background: rgba(255, 51, 51, 0.15) !important;
                 transition: all 0.3s !important;
                 font-size: 0.8rem !important;
             }
             div[data-testid="stHorizontalBlock"] > div > div > button:hover {
                 transform: translateY(-2px) !important;
-                box-shadow: 0 2px 8px rgba(255, 102, 179, 0.3) !important;
+                box-shadow: 0 2px 8px rgba(255, 51, 51, 0.3) !important;
             }
             @media (max-width: 400px) {
                 div[data-testid="stHorizontalBlock"] > div > div > button {
@@ -1093,7 +1095,7 @@ class UiService:
         st.markdown("""
         <style>
             .chat-header {
-                background: linear-gradient(90deg, #ff66b3, #ff1493);
+                background: linear-gradient(90deg, #8B0000, #FF0000);
                 color: white;
                 padding: 15px;
                 border-radius: 10px;
@@ -1103,12 +1105,12 @@ class UiService:
             }
             .stAudio {
                 border-radius: 20px !important;
-                background: rgba(255, 102, 179, 0.1) !important;
+                background: rgba(255, 51, 51, 0.1) !important;
                 padding: 10px !important;
                 margin: 10px 0 !important;
             }
             audio::-webkit-media-controls-panel {
-                background: linear-gradient(45deg, #ff66b3, #ff1493) !important;
+                background: linear-gradient(45deg, #8B0000, #FF0000) !important;
             }
         </style>
         """, unsafe_allow_html=True)
@@ -1123,7 +1125,7 @@ class UiService:
         
         st.sidebar.markdown(f"""
         <div style="
-            background: rgba(255, 20, 147, 0.1);
+            background: rgba(255, 51, 51, 0.1);
             padding: 10px;
             border-radius: 8px;
             margin-bottom: 15px;
@@ -1215,7 +1217,7 @@ class ChatService:
                             with st.chat_message("assistant", avatar="💋"):
                                 st.markdown(f"""
                                 <div style="
-                                    background: linear-gradient(45deg, #ff66b3, #ff1493);
+                                    background: linear-gradient(45deg, #8B0000, #FF0000);
                                     color: white;
                                     padding: 12px;
                                     border-radius: 18px 18px 18px 0;
@@ -1238,7 +1240,7 @@ class ChatService:
                             with st.chat_message("assistant", avatar="💋"):
                                 st.markdown(f"""
                                 <div style="
-                                    background: linear-gradient(45deg, #ff66b3, #ff1493);
+                                    background: linear-gradient(45deg, #8B0000, #FF0000);
                                     color: white;
                                     padding: 12px;
                                     border-radius: 18px 18px 18px 0;
@@ -1251,7 +1253,7 @@ class ChatService:
                         with st.chat_message("assistant", avatar="💋"):
                             st.markdown(f"""
                             <div style="
-                                background: linear-gradient(45deg, #ff66b3, #ff1493);
+                                background: linear-gradient(45deg, #8B0000, #FF0000);
                                 color: white;
                                 padding: 12px;
                                 border-radius: 18px 18px 18px 0;
@@ -1342,7 +1344,7 @@ class ChatService:
                 if isinstance(resposta, dict):
                     st.markdown(f"""
                     <div style="
-                        background: linear-gradient(45deg, #ff66b3, #ff1493);
+                        background: linear-gradient(45deg, #8B0000, #FF0000);
                         color: white;
                         padding: 12px;
                         border-radius: 18px 18px 18px 0;
@@ -1364,7 +1366,7 @@ class ChatService:
                 else:
                     st.markdown(f"""
                     <div style="
-                        background: linear-gradient(45deg, #ff66b3, #ff1493);
+                        background: linear-gradient(45deg, #8B0000, #FF0000);
                         color: white;
                         padding: 12px;
                         border-radius: 18px 18px 18px 0;
@@ -1401,36 +1403,36 @@ def main():
     st.markdown("""
     <style>
         [data-testid="stSidebar"] {
-            background: linear-gradient(180deg, #1e0033 0%, #3c0066 100%) !important;
-            border-right: 1px solid #ff66b3 !important;
+            background: linear-gradient(180deg, #8B0000 0%, #FF0000 100%) !important;
+            border-right: 1px solid #FF3333 !important;
         }
         .stButton button {
-            background: rgba(255, 20, 147, 0.2) !important;
+            background: rgba(255, 51, 51, 0.2) !important;
             color: white !important;
-            border: 1px solid #ff66b3 !important;
+            border: 1px solid #FF3333 !important;
             transition: all 0.3s !important;
         }
         .stButton button:hover {
-            background: rgba(255, 20, 147, 0.4) !important;
+            background: rgba(255, 51, 51, 0.4) !important;
             transform: translateY(-2px) !important;
         }
         [data-testid="stChatInput"] {
-            background: rgba(255, 102, 179, 0.1) !important;
-            border: 1px solid #ff66b3 !important;
+            background: rgba(255, 51, 51, 0.1) !important;
+            border: 1px solid #FF3333 !important;
         }
         div.stButton > button:first-child {
-            background: linear-gradient(45deg, #ff1493, #9400d3) !important;
+            background: linear-gradient(45deg, #8B0000, #FF0000) !important;
             color: white !important;
             border: none !important;
             border-radius: 20px !important;
             padding: 10px 24px !important;
             font-weight: bold !important;
             transition: all 0.3s !important;
-            box-shadow: 0 4px 8px rgba(255, 20, 147, 0.3) !important;
+            box-shadow: 0 4px 8px rgba(255, 51, 51, 0.3) !important;
         }
         div.stButton > button:first-child:hover {
             transform: translateY(-2px) !important;
-            box-shadow: 0 6px 12px rgba(255, 20, 147, 0.4) !important;
+            box-shadow: 0 6px 12px rgba(255, 51, 51, 0.4) !important;
         }
     </style>
     """, unsafe_allow_html=True)
@@ -1461,8 +1463,8 @@ def main():
         with col2:
             st.markdown("""
             <div style="text-align: center; margin: 50px 0;">
-                <img src="{profile_img}" width="120" style="border-radius: 50%; border: 3px solid #ff66b3;">
-                <h2 style="color: #ff66b3; margin-top: 15px;">Paloma</h2>
+                <img src="{profile_img}" width="120" style="border-radius: 50%; border: 3px solid #FF3333;">
+                <h2 style="color: #FF0000; margin-top: 15px;">Paloma</h2>
                 <p style="font-size: 1.1em;">Estou pronta para você, amor...</p>
             </div>
             """.format(profile_img=Config.IMG_PROFILE), unsafe_allow_html=True)
